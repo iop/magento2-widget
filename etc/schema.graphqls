@@ -1,0 +1,20 @@
+type Query {
+    widgetById (
+        id: Int @doc(description: "CMS Widget ID")
+    ): WidgetData
+    @resolver(class: "Iop\\Widget\\Model\\Resolver\\Widget")
+    @doc(description: "CMS Widget DATA by its identifier")
+}
+
+type WidgetData @doc(description: "CMS Widget DATA") {
+    id: Int @doc(description: "ID of the CMS Widget")
+    title: String @doc(description: "TITLE of the CMS Widget")
+    theme_id: Int @doc(description: "THEME ID of the CMS Widget")
+    html: String @doc(description: "HTML provided by CMS Widget instance")
+    parameters: [WidgetInstanceOption] @doc(description: "An array of CMS widget options")
+}
+
+type WidgetInstanceOption @doc(description: "CMS WIDGET OPTION") {
+    name: String @doc(description: "Name of the Widget option")
+    value: String @doc(description: "Mixed value of the CMS widget option")
+}

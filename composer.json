@@ -1,0 +1,30 @@
+{
+    "name": "iop/magento2-widget",
+    "type": "magento2-module",
+    "version": "1.0.0",
+    "license": "OSL-3.0",
+    "description": "Magento 2 widget to show 'Frequently Ordered Products' and 'Recently Ordered Products' for B2B logged customer. GraphQL API added.",
+    "homepage": "https://github.com/iop/magento2-widget",
+    "keywords": [
+        "composer-installer",
+        "magento"
+    ],
+    "require": {
+        "php": "~7.1.3||~7.2.0||~7.3.0",
+        "magento/framework": "102.0.*"
+    },
+    "autoload": {
+        "files": [
+            "registration.php"
+        ],
+        "psr-4": {
+            "Iop\\Widget\\": ""
+        }
+    },
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/iop/magento2-widget"
+        }
+    ]
+}
